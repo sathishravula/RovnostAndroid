@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#cc202e</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="navigation_divider">#474546</color>
+    <color name="navigation_background">#211f20</color>
+    <color name="search_hint_color">#939393</color>
+    <color name="general_grid_color">#fae1ff</color>
+    <color name="childcare_grid_color">#ccfee1</color>
+    <color name="eyecare_grid_color">#ffdad2</color>
+    <color name="dental_grid_color">#ffd5e3</color>
+    <color name="psychology_grid_color">#dbf6ff</color>
+    <color name="gynecology_grid_color">#fff6db</color>
+</resources>
