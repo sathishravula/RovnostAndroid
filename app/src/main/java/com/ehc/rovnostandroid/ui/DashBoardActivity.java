@@ -2,6 +2,7 @@ package com.ehc.rovnostandroid.ui;
 
 import android.app.SearchManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +14,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
@@ -39,6 +41,8 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
     private LinearLayout findDoctorLayout;
     private RelativeLayout dummyBackground;
     private LinearLayout gridLayout;
+    private RelativeLayout symtomsLayout;
+    private TextView findDoctor;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -88,14 +92,15 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
         consultations = (TextView) findViewById(R.id.consultation);
         payments = (TextView) findViewById(R.id.payments);
 
+        symtomsLayout = (RelativeLayout) findViewById(R.id.symptoms_layout);
         recyclerViewLayout = (RelativeLayout) findViewById(R.id.recycler_view_layout);
         findDoctorLayout = (LinearLayout) findViewById(R.id.find_doctor_layout);
+        findDoctor = (TextView) findViewById(R.id.find_doctor);
         dummyBackground = (RelativeLayout) findViewById(R.id.dumy_background);
         gridLayout = (LinearLayout) findViewById(R.id.grid_layout);
-
-
         consultations.setOnClickListener(this);
         payments.setOnClickListener(this);
+        findDoctor.setOnClickListener(this);
         gridLayout.setVisibility(View.VISIBLE);
 
 
@@ -138,18 +143,22 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                if(gridLayout.getVisibility()==View.VISIBLE)
-                mDrawerLayout.openDrawer(GravityCompat.START);
+                if (gridLayout.getVisibility() == View.VISIBLE)
+                    mDrawerLayout.openDrawer(GravityCompat.START);
                 else {
                     getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_menu);
                     recyclerViewLayout.setVisibility(View.GONE);
                     gridLayout.setVisibility(View.VISIBLE);
                     findDoctorLayout.setVisibility(View.GONE);
                     dummyBackground.setVisibility(View.GONE);
-                    searchView.setQuery("",false);
+                    searchView.setQuery("", false);
                     searchView.clearFocus();
                 }
                 return true;
+
+            case R.id.notification:
+
+
         }
         return super.onOptionsItemSelected(item);
     }
@@ -182,6 +191,10 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
                 Toast.makeText(getApplicationContext(), "payments page", Toast.LENGTH_SHORT).show();
                 mDrawerLayout.closeDrawers();
                 break;
+            case R.id.find_doctor:
+                Intent intent=new Intent(this,DoctorsActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 
@@ -197,7 +210,7 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
                 if (data.toLowerCase().contains(newText.toLowerCase()))
                     myDataset.add(data);
             }
-            if (gridLayout.getVisibility()==View.VISIBLE){
+            if (gridLayout.getVisibility() == View.VISIBLE) {
                 getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_navigate_before_white_36dp);
                 recyclerViewLayout.setVisibility(View.VISIBLE);
                 gridLayout.setVisibility(View.GONE);

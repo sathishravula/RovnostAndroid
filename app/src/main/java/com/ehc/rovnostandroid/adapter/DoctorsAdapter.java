@@ -9,12 +9,11 @@ import android.widget.TextView;
 import com.ehc.rovnostandroid.R;
 
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 /**
  * Created by ehc on 16/2/16.
  */
-public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder> {
+public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHolder> {
     private ArrayList<String> mDataset;
 
     // Provide a reference to the views for each data item
@@ -32,17 +31,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public SearchAdapter(ArrayList<String> myDataset) {
-        mDataset = myDataset;
+    public DoctorsAdapter() {
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public SearchAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
-                                                       int viewType) {
+    public DoctorsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+                                                        int viewType) {
         // create a new view
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.search_child_view, parent, false);
+                .inflate(R.layout.doctors_list, parent, false);
         // set the view's size, margins, paddings and layout parameters
         ViewHolder vh = new ViewHolder(v);
         return vh;
@@ -53,14 +51,14 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        if(mDataset.get(position)!=null)
-        holder.mTextView.setText(mDataset.get(position));
+//        if(mDataset.get(position)!=null)
+//        holder.mTextView.setText(mDataset.get(position));
 
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
-        return mDataset.size();
+        return 10;
     }
 }

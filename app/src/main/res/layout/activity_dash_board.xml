@@ -98,12 +98,19 @@
                     android:layout_height="wrap_content"
                     android:background="#e3e3e3"
                     android:visibility="gone"
+                    android:orientation="vertical"
                     android:layout_alignParentBottom="true">
+                    <RelativeLayout
+                        android:id="@+id/symptoms_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </RelativeLayout>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_centerInParent="true"
                         android:gravity="center"
+                        android:id="@+id/find_doctor"
                         android:padding="12dp"
                         android:layout_marginLeft="16dp"
                         android:layout_marginRight="16dp"
@@ -126,7 +133,7 @@
                 android:paddingTop="16dp"
                 android:visibility="visible"
                 android:weightSum="10">
-
+              
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"

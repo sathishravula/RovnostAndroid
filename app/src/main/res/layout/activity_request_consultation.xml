@@ -1,0 +1,315 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context=".ui.LoginActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.gc.materialdesign.views.ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_height="wrap_content">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/image"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="15dp"
+                        android:src="@drawable/pic"
+                        app:civ_border_color="#FF000000"
+                        app:civ_border_width="2dp"
+                        app:civ_fill_color="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/image"
+                        android:gravity="center"
+                        android:text="Dr.Sushmitha reddy"
+                        android:textColor="#CC0033"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/qualification"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:text="M.B.B.S,M.D"
+                        android:textSize="12dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/qualification"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:background="#e3e3e3" />
+
+                        <TextView
+                            android:id="@+id/details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/white"
+                            android:text="    SELECT CONSULTATION TYPE    "
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/Selection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:paddingTop="10dp"
+                        android:weightSum="2">
+
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:id="@+id/audio"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_dark"
+                            android:text="Audio Only" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:id="@+id/video"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_weight="1"
+                            android:background="@android:color/holo_green_dark"
+                            android:text="Video" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/Selection"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp">
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_centerVertical="true"
+                            android:background="#e3e3e3"
+                            android:paddingLeft="16dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@android:color/white"
+                            android:text="    AVAILABLE TIME SLOTS    "
+                            android:textSize="10dp" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/calender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider2"
+                        android:paddingLeft="16dp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@color/colorPrimary"
+                            android:padding="10dp"
+                            android:gravity="center_vertical"
+                            android:text="27-02-2016"
+                            android:textColor="@android:color/white"
+                            android:textSize="10dp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/time_slots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/calender"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="10:00" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="10:30" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="11:00" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/time_slots1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/time_slots"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="11:30" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="12:00" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="12:30" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/time_slots2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/time_slots1"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="13:00" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="13:30" />
+
+                        <com.gc.materialdesign.views.ButtonRectangle
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="1"
+                            android:text="14:00" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/time_slots2"
+                        android:layout_marginBottom="30dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#fbf7b0"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Consultation Fees"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="\u20B9 500"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/request"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#fff568"
+                android:elevation="2dp"
+                android:gravity="center"
+                android:text="Request Consultation"
+                android:textAllCaps="true"
+                android:textColor="#6e4508"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </com.gc.materialdesign.views.ScrollView>
+
+
+</RelativeLayout>
+

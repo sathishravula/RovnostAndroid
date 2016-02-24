@@ -33,4 +33,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'org.parceler:parceler-api:1.0.3'
+    compile 'com.github.anasanasanas123:MaterialDesignLibrary:1.7'
 }
