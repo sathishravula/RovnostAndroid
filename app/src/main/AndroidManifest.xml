@@ -32,7 +32,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.DashBoardActivity" />
-        <activity android:name=".ui.DoctorsActivity"></activity>
+        <activity android:name=".ui.DoctorsActivity" />
+        <activity android:name=".ui.RequestConsultationActivity" />
+        <activity
+            android:name=".ui.MyProfile"
+            android:label="@string/title_activity_my_profile"></activity>
     </application>
 
 </manifest>

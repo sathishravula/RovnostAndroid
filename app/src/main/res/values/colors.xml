@@ -12,4 +12,6 @@
     <color name="dental_grid_color">#ffd5e3</color>
     <color name="psychology_grid_color">#dbf6ff</color>
     <color name="gynecology_grid_color">#fff6db</color>
+    <color name="bg_theme">#f2f2f2</color>
+    <color name="bg_profile">#fff568</color>
 </resources>
