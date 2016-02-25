@@ -290,7 +290,7 @@
                 android:layout_height="wrap_content">
                 <de.hdodenhof.circleimageview.CircleImageView
                     xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/image"
+                    android:id="@+id/profile_image"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_centerHorizontal="true"
@@ -305,8 +305,8 @@
                     android:layout_centerHorizontal="true"
                     android:background="@android:color/transparent"
                     android:src="@android:drawable/ic_menu_camera"
-                    android:layout_alignRight="@+id/image"
-                    android:layout_alignBottom="@+id/image"
+                    android:layout_alignRight="@+id/profile_image"
+                    android:layout_alignBottom="@+id/profile_image"
                     app:civ_fill_color="@android:color/black" />
             </RelativeLayout>
 

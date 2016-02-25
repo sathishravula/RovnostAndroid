@@ -3,6 +3,7 @@
     <string name="ok">ok</string>
     <string name="login">LOGIN</string>
     <string name="title_activity_my_profile">MyProfile</string>
+    <string name="choose_image">Choose Image</string>
     <string-array name="blood_groups">
         <item>A+</item>
         <item>A-</item>
@@ -16,6 +17,10 @@
     <string-array name="marital_status">
         <item>Single</item>
         <item>Married</item>
+    </string-array>
+    <string-array name="folders">
+        <item>Gallery</item>
+        <item>Camera</item>
     </string-array>
     <string-array name="feets">
         <item>1</item>
