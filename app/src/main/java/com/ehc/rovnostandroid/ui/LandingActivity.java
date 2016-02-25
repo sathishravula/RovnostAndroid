@@ -41,7 +41,7 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
         Intent intent = null;
         switch (v.getId()) {
             case R.id.login:
-                intent = new Intent(this, MyProfile.class);
+                intent = new Intent(this, DashBoardActivity.class);
                 startActivity(intent);
                 break;
             case R.id.register:

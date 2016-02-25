@@ -15,40 +15,41 @@ import com.ehc.rovnostandroid.R;
 
 import java.util.ArrayList;
 
+import javax.inject.Inject;
+
 /**
  * Created by ehc on 16/2/16.
  */
-public class DoctorsAdapter extends RecyclerView.Adapter<DoctorsAdapter.ViewHolder> {
+public class RatingsAdapter extends RecyclerView.Adapter<RatingsAdapter.ViewHolder> {
     private ArrayList<String> mDataset;
-    private Context context;
+    public Context context;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final RatingBar ratingBar;
         // each data item is just a string in this case
         public TextView mTextView;
+        public RatingBar ratingBar;
 
         public ViewHolder(View v) {
             super(v);
-//            mTextView = v;
             ratingBar = (RatingBar) v.findViewById(R.id.rating_bar);
         }
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public DoctorsAdapter(Context applicationContext) {
+    public RatingsAdapter(Context applicationContext) {
         context=applicationContext;
     }
 
     // Create new views (invoked by the layout manager)
     @Override
-    public DoctorsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
+    public RatingsAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                         int viewType) {
         // create a new view
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.doctors_list, parent, false);
+                .inflate(R.layout.rating_view, parent, false);
         // set the view's size, margins, paddings and layout parameters
         ViewHolder vh = new ViewHolder(v);
         return vh;

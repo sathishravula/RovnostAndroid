@@ -12,13 +12,14 @@ import com.ehc.rovnostandroid.ui.ForgotPassword;
 import com.ehc.rovnostandroid.ui.LandingActivity;
 import com.ehc.rovnostandroid.ui.LoginActivity;
 import com.ehc.rovnostandroid.ui.MyProfile;
+import com.ehc.rovnostandroid.ui.RatingActivity;
 import com.ehc.rovnostandroid.ui.RegisterActivity;
 import com.ehc.rovnostandroid.ui.RequestConsultationActivity;
 
 import dagger.Module;
 import dagger.Provides;
 
-@Module(injects = {LoginActivity.class , RegisterActivity.class, LandingActivity.class, ChangePassword.class,ForgotPassword.class,DashBoardActivity.class, DoctorsActivity.class, RequestConsultationActivity.class, ConfirmationActivity.class, MyProfile.class}, library = true, complete = false)
+@Module(injects = {LoginActivity.class , RegisterActivity.class, RatingActivity.class,LandingActivity.class, ChangePassword.class,ForgotPassword.class,DashBoardActivity.class, DoctorsActivity.class, RequestConsultationActivity.class, ConfirmationActivity.class, MyProfile.class}, library = true, complete = false)
 
 public class AndroidModule {
 

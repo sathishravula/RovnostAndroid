@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_theme"
-    tools:context="com.ehc.rovnostandroid.ui.DoctorsActivity">
+    tools:context="com.ehc.rovnostandroid.ui.RatingActivity">
     <include
         layout="@layout/toolbar"
         android:layout_width="match_parent"
@@ -21,5 +21,4 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </RelativeLayout>
-
 </RelativeLayout>

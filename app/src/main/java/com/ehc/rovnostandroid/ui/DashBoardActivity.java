@@ -43,6 +43,9 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
     private LinearLayout gridLayout;
     private RelativeLayout symtomsLayout;
     private TextView findDoctor;
+    private TextView ratings;
+    private TextView myProfile;
+    private TextView logout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -90,6 +93,9 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
         mRecyclerView.setAdapter(mAdapter);
 
         consultations = (TextView) findViewById(R.id.consultation);
+        ratings = (TextView) findViewById(R.id.ratings);
+        myProfile = (TextView) findViewById(R.id.my_profile);
+        logout = (TextView) findViewById(R.id.logout);
         payments = (TextView) findViewById(R.id.payments);
 
         symtomsLayout = (RelativeLayout) findViewById(R.id.symptoms_layout);
@@ -100,6 +106,9 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
         gridLayout = (LinearLayout) findViewById(R.id.grid_layout);
         consultations.setOnClickListener(this);
         payments.setOnClickListener(this);
+        ratings.setOnClickListener(this);
+        logout.setOnClickListener(this);
+        myProfile.setOnClickListener(this);
         findDoctor.setOnClickListener(this);
         gridLayout.setVisibility(View.VISIBLE);
 
@@ -182,6 +191,7 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent intent=null;
         switch (v.getId()) {
             case R.id.consultation:
                 Toast.makeText(getApplicationContext(), "consultation page", Toast.LENGTH_SHORT).show();
@@ -192,8 +202,18 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
                 mDrawerLayout.closeDrawers();
                 break;
             case R.id.find_doctor:
-                Intent intent=new Intent(this,DoctorsActivity.class);
+                 intent=new Intent(this,DoctorsActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.ratings:
+               intent=new Intent(this,RatingActivity.class);
+                startActivity(intent);
+                mDrawerLayout.closeDrawers();
+                break;
+            case R.id.my_profile:
+                intent=new Intent(this,MyProfile.class);
+                startActivity(intent);
+                mDrawerLayout.closeDrawers();
                 break;
         }
     }

@@ -120,7 +120,7 @@
                         android:background="#e3e3e3" />
 
                     <RatingBar
-                        android:id="@+id/ratingBar1"
+                        android:id="@+id/rating_bar"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/view1"
@@ -135,7 +135,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:padding="5dp"
-                        android:layout_below="@+id/ratingBar1"
+                        android:layout_below="@+id/rating_bar"
                         android:background="@android:color/white"
                         android:hint="Share your experiance"
                         android:textSize="10dp" />

@@ -2,13 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="15dp"
+    android:background="@color/white"
+    android:padding="16dp"
     android:weightSum="10">
 
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="3">
+        android:layout_weight="2">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/image"
@@ -16,8 +17,6 @@
             android:layout_height="80dp"
             android:layout_centerInParent="true"
             android:src="@drawable/pic"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp"
             app:civ_fill_color="@android:color/black" />
     </RelativeLayout>
 
@@ -25,7 +24,7 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="7">
+        android:layout_weight="8">
 
         <TextView
             android:id="@+id/title"
@@ -77,7 +76,7 @@
             android:textSize="14dp" />
 
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/book"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,9 +89,21 @@
             android:textAllCaps="true"
             android:textColor="#ffffff"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            android:textStyle="bold" />-->
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/book"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="8dp"
+            android:layout_alignBottom="@+id/price"
+            android:background="@color/colorPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/login"
+            android:text="Book" />
         <RatingBar
-            android:id="@+id/ratingBar"
+            android:id="@+id/rating_bar"
             android:layout_width="wrap_content"
             android:numStars="5"
             android:rating="2"
@@ -107,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/price"
             android:layout_marginLeft="15dp"
-            android:layout_toRightOf="@id/ratingBar"
+            android:layout_toRightOf="@id/rating_bar"
             android:text="-20 consultations"
             android:textSize="14dp" />
     </RelativeLayout>

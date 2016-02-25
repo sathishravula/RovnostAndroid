@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ui.LoginActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.LandingActivity"
             android:screenOrientation="portrait">
@@ -30,7 +30,7 @@
         </activity>
         <activity
             android:name=".ui.RegisterActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.DashBoardActivity"
             android:screenOrientation="portrait" />
@@ -46,7 +46,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.ChangePassword"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.RatingActivity"></activity>
     </application>
 
 </manifest>

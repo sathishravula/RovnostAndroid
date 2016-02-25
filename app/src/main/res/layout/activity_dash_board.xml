@@ -354,6 +354,7 @@
                     android:drawableLeft="@drawable/ic_discuss"
                     android:drawablePadding="15dp"
                     android:padding="10dp"
+                    android:id="@+id/my_profile"
                     android:text="My Profile"
                     android:textColor="@android:color/white" />
 
@@ -369,6 +370,7 @@
                     android:drawablePadding="15dp"
                     android:padding="10dp"
                     android:text="Ratings"
+                    android:id="@+id/ratings"
                     android:textColor="@android:color/white" />
 
                 <View
@@ -382,6 +384,7 @@
                     android:drawableLeft="@drawable/ic_discuss"
                     android:drawablePadding="15dp"
                     android:padding="10dp"
+                    android:id="@+id/logout"
                     android:text="Logout"
                     android:textColor="@android:color/white" />
 
