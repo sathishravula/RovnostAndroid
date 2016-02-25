@@ -47,7 +47,8 @@
         <activity
             android:name=".ui.ChangePassword"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.RatingActivity"></activity>
+        <activity android:name=".ui.RatingActivity" />
+        <activity android:name=".ui.PaymentsActivity"></activity>
     </application>
 
 </manifest>

@@ -198,11 +198,12 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
                 mDrawerLayout.closeDrawers();
                 break;
             case R.id.payments:
-                Toast.makeText(getApplicationContext(), "payments page", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, PaymentsActivity.class);
+                startActivity(intent);
                 mDrawerLayout.closeDrawers();
                 break;
             case R.id.find_doctor:
-                 intent=new Intent(this,DoctorsActivity.class);
+                intent = new Intent(this, DoctorsActivity.class);
                 startActivity(intent);
                 break;
             case R.id.ratings:
