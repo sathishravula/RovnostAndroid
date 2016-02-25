@@ -5,6 +5,7 @@
     <string name="title_activity_my_profile">MyProfile</string>
     <string name="choose_image">Choose Image</string>
     <string name="rating_screen_title">Ratings</string>
+    <string name="consultations_screen_title">Consultations</string>
     <string-array name="blood_groups">
         <item>A+</item>
         <item>A-</item>

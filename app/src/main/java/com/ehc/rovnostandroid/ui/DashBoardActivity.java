@@ -194,7 +194,8 @@ public class DashBoardActivity extends BaseActivity implements View.OnClickListe
         Intent intent=null;
         switch (v.getId()) {
             case R.id.consultation:
-                Toast.makeText(getApplicationContext(), "consultation page", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, ConsultationsActivity.class);
+                startActivity(intent);
                 mDrawerLayout.closeDrawers();
                 break;
             case R.id.payments:

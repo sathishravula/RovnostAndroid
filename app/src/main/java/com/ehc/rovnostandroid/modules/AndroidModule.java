@@ -6,6 +6,7 @@ import android.content.Context;
 import com.ehc.rovnostandroid.app.RovnostApplication;
 import com.ehc.rovnostandroid.ui.ChangePassword;
 import com.ehc.rovnostandroid.ui.ConfirmationActivity;
+import com.ehc.rovnostandroid.ui.ConsultationsActivity;
 import com.ehc.rovnostandroid.ui.DashBoardActivity;
 import com.ehc.rovnostandroid.ui.DoctorsActivity;
 import com.ehc.rovnostandroid.ui.ForgotPassword;
@@ -20,7 +21,7 @@ import com.ehc.rovnostandroid.ui.RequestConsultationActivity;
 import dagger.Module;
 import dagger.Provides;
 
-@Module(injects = {LoginActivity.class , RegisterActivity.class, PaymentsActivity.class,RatingActivity.class,LandingActivity.class, ChangePassword.class,ForgotPassword.class,DashBoardActivity.class, DoctorsActivity.class, RequestConsultationActivity.class, ConfirmationActivity.class, MyProfile.class}, library = true, complete = false)
+@Module(injects = {LoginActivity.class , RegisterActivity.class, ConsultationsActivity.class,PaymentsActivity.class,RatingActivity.class,LandingActivity.class, ChangePassword.class,ForgotPassword.class,DashBoardActivity.class, DoctorsActivity.class, RequestConsultationActivity.class, ConfirmationActivity.class, MyProfile.class}, library = true, complete = false)
 
 public class AndroidModule {
 
